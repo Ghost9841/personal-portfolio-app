@@ -2,7 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 body {
+=======
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+>>>>>>> bdaad359921a071f68c4e36d688a84ccee423f70
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -11,6 +29,7 @@ body {
     text-wrap: balance;
   }
 }
+<<<<<<< HEAD
 
 @layer base {
   :root {
@@ -76,3 +95,5 @@ body {
     @apply bg-background text-foreground;
   }
 }
+=======
+>>>>>>> bdaad359921a071f68c4e36d688a84ccee423f70

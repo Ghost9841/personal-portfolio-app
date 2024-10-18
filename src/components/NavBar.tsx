@@ -1,21 +1,15 @@
 'use client';
 import React, { useState } from "react";
-import {  Menu, MenuItem,  } from "./ui/navbar-menu";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utilis";
 import Link from "next/link";
-import { useTheme } from "next-themes"
- 
-
-
 const NavBar = ({ className }: { className?: string }) => {
-  const { setTheme } = useTheme();
     const [active, setActive] = useState<string | null>(null);
   return (
     <div
-       className={cn("top-1 inset-x-0 max-w-3xl mx-auto z-50", className)}
+       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
         <Menu setActive={setActive}> 
-          
           <Link href={"/"}>
           <MenuItem setActive={setActive} active={active} item ="Home">
           </MenuItem>
@@ -26,9 +20,8 @@ const NavBar = ({ className }: { className?: string }) => {
           <Link href={"/skills"}>
           <MenuItem setActive={setActive} active={active} item = "Skills">
           </MenuItem></Link>
-          <Link href={"/contact"}>
+          <Link href={"/Contact"}>
           <MenuItem setActive={setActive} active={active} item = "Contact">
-         
           </MenuItem></Link>
         </Menu>
     </div>
@@ -37,4 +30,3 @@ const NavBar = ({ className }: { className?: string }) => {
 }
 
 export default NavBar
-

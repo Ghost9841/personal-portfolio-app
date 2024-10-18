@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+<<<<<<< HEAD
   darkMode : ['class', "class"],
   theme: {
   	extend: {
@@ -59,5 +60,17 @@ const config: Config = {
   	}
   },
   plugins: [require("tailwindcss-animate")],
+=======
+  darkMode : 'class',
+  theme: {
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
+    },
+  },
+  plugins: [],
+>>>>>>> bdaad359921a071f68c4e36d688a84ccee423f70
 };
 export default config;
